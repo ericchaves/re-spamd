@@ -1,8 +1,8 @@
-(ns respa.ui
-  "reusable UI elements
+(ns {{name}}.ui
+    "reusable UI elements
    - each element is a pure functions returning hiccup
    - all logic/behaviour MUST be left on *components* ns"
-  (:require [cljsjs.material]))
+    (:require [cljsjs.material]))
 
 
 (when ^boolean goog.DEBUG 

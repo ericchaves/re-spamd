@@ -1,8 +1,9 @@
 (ns leiningen.new.re-spamd
-  (:require [leiningen.new.templates :refer [renderer name-to-path ->files]]
+  (:require [leiningen.new.templates :refer [renderer name-to-path raw-resourcer year ->files]]
             [leiningen.core.main :as main]))
 
 (def render (renderer "re-spamd"))
+(def raw (raw-resourcer "re-spamd"))
 
 (defn re-spamd
   "Create a new re-frame spa."
@@ -16,10 +17,11 @@
     (->files data
              [".gitignore" (render ".gitignore")]
              ["README.md" (render "README.md" data)]
+             ["LICENSE" (render "LICENSE" data)]
              ["boot.properties" (render "boot.properties")]
              ["build.boot" (render "build.boot" data)]
              ["less/less.main.less" (render "less.main.less")]
-             ["resources/images/welcome_card.jpg" (render "welcome_card.jpg")]
+             ["resources/images/welcome_card.jpg" (raw "welcome_card.jpg")]
              ["resources/index.html" (render "index.html" data)]
              ["resources/js/core.cljs.edn" (render "core.cljs.edn" data)]
              ["src/cljs/{{sanitized}}/components.cljs" (render "components.cljs" data)]

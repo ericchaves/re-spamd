@@ -1,9 +1,9 @@
-(ns respa.db
-  "Application state
+(ns {{name}}.db
+    "Application state
   - use a global db for all application state (same concept of a redux store).
   - schema is used to ensure that app-db is always consistent"
-  (:require [cljs.reader]
-            [schema.core :as s :include-macros true]))
+    (:require [cljs.reader]
+              [schema.core :as s :include-macros true]))
 
 
 
@@ -19,7 +19,7 @@
 
 (def default-db {:page :login})
 
-(def lsk "respa-db")
+(def lsk "{{name}}-db")
 
 (defn load-db!
   "Load db state from localstorage"

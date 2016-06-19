@@ -1,12 +1,12 @@
-(ns respa.core 
-  (:require [reagent.core :as reagent :refer [atom]] 
-            [re-frame.core :refer [dispatch dispatch-sync]]
-            [secretary.core :as secretary] 
-            [respa.routes :as r]
-            [respa.handlers :as h]
-            [respa.subs :as s]
-            [respa.components :as c]
-            [devtools.core :as devtools]))
+(ns {{name}}.core 
+    (:require [reagent.core :as reagent :refer [atom]] 
+              [re-frame.core :refer [dispatch dispatch-sync]]
+              [secretary.core :as secretary] 
+              [{{name}}.routes :as r]
+              [{{name}}.handlers :as h]
+              [{{name}}.subs :as s]
+              [{{name}}.components :as c]
+              [devtools.core :as devtools]))
 
 (when ^boolean js/goog.DEBUG  
   (devtools/install! [:custom-formatters])

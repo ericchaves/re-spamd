@@ -10,4 +10,5 @@ boot dev
 ```
 # License
 
+Copyright © {{year}} {{author}}
 Dsitributed under [MIT License](https://opensource.org/licenses/MIT).

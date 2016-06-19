@@ -51,7 +51,7 @@
 (deftask development []
   (task-options! cljs   {:optimizations :none
                          :source-map true}
-                 reload {:on-jsload 'respa.core/render}
+                 reload {:on-jsload '{{name}}.core/render}
                  less   {:source-map  true})
   identity)
 

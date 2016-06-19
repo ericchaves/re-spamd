@@ -1,7 +1,7 @@
-(ns respa.handlers
-  (:require [re-frame.core :refer [register-handler path trim-v after debug]]
-            [schema.core :as s]
-            [respa.db :refer [load-db! save-db default-db schema]]))
+(ns {{name}}.handlers
+    (:require [re-frame.core :refer [register-handler path trim-v after debug]]
+              [schema.core :as s]
+              [{{name}}.db :refer [load-db! save-db default-db schema]]))
 
 (defn check-and-report
   "log error in console if db doesn't match the schema."

@@ -1,16 +1,16 @@
-(ns respa.components
-  "first class components
+(ns {{name}}.components
+    "first class components
    - MAY contain some logic/behavior.
    - re-frame subscriptions or dispatchs SHOULD occur here most of the time.
    - use a local ratom for local validations or temporary data that won't be
      persisted in app-db, like form validations and such."
-  (:require [reagent.core :as r :refer [atom]]
-            [re-frame.core :refer [subscribe dispatch dispatch-sync]]
-            [respa.ui :as ui]
-            [cljsjs.material]
-            [respa.db :as db]
-            [schema.core :as s :include-macros true]
-            [clojure.string :refer [split blank?]]))
+    (:require [reagent.core :as r :refer [atom]]
+              [re-frame.core :refer [subscribe dispatch dispatch-sync]] 
+              [cljsjs.material]
+              [{{name}}.ui :as ui]
+              [{{name}}.db :as db]
+              [schema.core :as s :include-macros true]
+              [clojure.string :refer [split]]))
 
 (when ^boolean goog.DEBUG
   (enable-console-print!))
@@ -50,7 +50,8 @@
                            [:li [:a {:href "https://reagent-project.github.io/" :target "_blank"} "Reagent"]]
                            [:li [:a {:href "https://github.com/Day8/re-frame" :target "_blank"} "re-frame"]]
                            [:li [:a {:href "http://getmdl.io" :target "_blank"} "Material Design"]]
-                           [:li [:a {:href "http://boot-clj.com/"} "Boot for clojure"]]]]
+                           [:li [:a {:href "http://boot-clj.com/"} "Boot for clojure"]]
+                           [:li [:a {:href "http://lesscss.org"} "Less"]]]]
                 }]))
 
 (defn login-page []

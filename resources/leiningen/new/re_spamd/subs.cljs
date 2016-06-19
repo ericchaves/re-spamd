@@ -1,7 +1,7 @@
-(ns respa.subs
-  ;;make-reation used instead of reaction due to tracer
-  (:require-macros [reagent.ratom :refer [reaction]])
-  (:require [re-frame.core :refer [register-sub]]))
+(ns {{name}}.subs
+    ;;make-reation used instead of reaction due to tracer
+    (:require-macros [reagent.ratom :refer [reaction]])
+    (:require [re-frame.core :refer [register-sub]]))
 
 (register-sub
  :current-user
